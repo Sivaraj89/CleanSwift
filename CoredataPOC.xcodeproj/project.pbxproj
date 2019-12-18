@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -27,9 +27,11 @@
 		438A1A4C23A24E9500A6CE34 /* CreateUserPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438A1A4623A24E9500A6CE34 /* CreateUserPresenter.swift */; };
 		438A1A4D23A24E9500A6CE34 /* CreateUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438A1A4723A24E9500A6CE34 /* CreateUserViewController.swift */; };
 		438A1A4E23A24E9500A6CE34 /* CreateUserModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438A1A4823A24E9500A6CE34 /* CreateUserModels.swift */; };
+		6C4FE9BFCD8F1DF66FF62132 /* Pods_CoredataPOC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33ABEB38928D44FA7DFC4C0D /* Pods_CoredataPOC.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		33ABEB38928D44FA7DFC4C0D /* Pods_CoredataPOC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoredataPOC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		43258E7123A8DDE600AF9AE4 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		4333D5B323A0B44D00B6B8E2 /* CoredataPOC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoredataPOC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4333D5B623A0B44D00B6B8E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -52,6 +54,8 @@
 		438A1A4623A24E9500A6CE34 /* CreateUserPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateUserPresenter.swift; sourceTree = "<group>"; };
 		438A1A4723A24E9500A6CE34 /* CreateUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateUserViewController.swift; sourceTree = "<group>"; };
 		438A1A4823A24E9500A6CE34 /* CreateUserModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateUserModels.swift; sourceTree = "<group>"; };
+		8B8C6AD03E1FA07F40E41A47 /* Pods-CoredataPOC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoredataPOC.release.xcconfig"; path = "Target Support Files/Pods-CoredataPOC/Pods-CoredataPOC.release.xcconfig"; sourceTree = "<group>"; };
+		B7212F639740D483C6AA759B /* Pods-CoredataPOC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoredataPOC.debug.xcconfig"; path = "Target Support Files/Pods-CoredataPOC/Pods-CoredataPOC.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,17 +63,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C4FE9BFCD8F1DF66FF62132 /* Pods_CoredataPOC.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		22729432BB9787667694D1D0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B7212F639740D483C6AA759B /* Pods-CoredataPOC.debug.xcconfig */,
+				8B8C6AD03E1FA07F40E41A47 /* Pods-CoredataPOC.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		4333D5AA23A0B44C00B6B8E2 = {
 			isa = PBXGroup;
 			children = (
 				4333D5B523A0B44D00B6B8E2 /* CoredataPOC */,
 				4333D5B423A0B44D00B6B8E2 /* Products */,
+				22729432BB9787667694D1D0 /* Pods */,
+				A04BEC0A2929BF5AD2F72A05 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -141,6 +157,14 @@
 			path = CoreData;
 			sourceTree = "<group>";
 		};
+		A04BEC0A2929BF5AD2F72A05 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				33ABEB38928D44FA7DFC4C0D /* Pods_CoredataPOC.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -148,9 +172,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4333D5C823A0B46300B6B8E2 /* Build configuration list for PBXNativeTarget "CoredataPOC" */;
 			buildPhases = (
+				2F926370EF37C0300C33AE77 /* [CP] Check Pods Manifest.lock */,
 				4333D5AF23A0B44C00B6B8E2 /* Sources */,
 				4333D5B023A0B44C00B6B8E2 /* Frameworks */,
 				4333D5B123A0B44C00B6B8E2 /* Resources */,
+				5EE7E99F4FF55F2E27AFF492 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -173,6 +199,7 @@
 				TargetAttributes = {
 					4333D5B223A0B44C00B6B8E2 = {
 						CreatedOnToolsVersion = 10.3;
+						LastSwiftMigration = 1120;
 					};
 				};
 			};
@@ -206,6 +233,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2F926370EF37C0300C33AE77 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CoredataPOC-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5EE7E99F4FF55F2E27AFF492 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CoredataPOC/Pods-CoredataPOC-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CoredataPOC/Pods-CoredataPOC-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CoredataPOC/Pods-CoredataPOC-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4333D5AF23A0B44C00B6B8E2 /* Sources */ = {
@@ -364,8 +433,10 @@
 		};
 		4333D5C923A0B46300B6B8E2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B7212F639740D483C6AA759B /* Pods-CoredataPOC.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D23VUK52AN;
 				INFOPLIST_FILE = CoredataPOC/Info.plist;
@@ -375,6 +446,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = wipropoc.CoredataPOC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CoredataPOC/CreateUsers/CoredataPOC-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -382,8 +455,10 @@
 		};
 		4333D5CA23A0B46300B6B8E2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B8C6AD03E1FA07F40E41A47 /* Pods-CoredataPOC.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D23VUK52AN;
 				INFOPLIST_FILE = CoredataPOC/Info.plist;
@@ -393,6 +468,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = wipropoc.CoredataPOC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CoredataPOC/CreateUsers/CoredataPOC-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
