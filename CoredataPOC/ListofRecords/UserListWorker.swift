@@ -11,10 +11,46 @@
 //
 
 import UIKit
+import PocketSocket
 
-class UserListWorker
+
+class UserListWorker : NSObject, PSWebSocketDelegate
 {
-  func doSomeWork()
+    var socket: PSWebSocket = PSWebSocket()
+    
+    
+    func doSomeWork()
   {
+    var request: URLRequest? = nil
+    if let urlre = URL(string: "http://192.168.1.102:9001/") {
+        request = URLRequest(url: urlre)
+    }
+    socket = PSWebSocket.clientSocket(with: request)
+    socket.delegate = self
+    socket.open()
   }
+    
+    func webSocketDidOpen(_ webSocket: PSWebSocket?) {
+        print("The websocket handshake completed and is now open!")
+    }
+
+    func webSocket(_ webSocket: PSWebSocket?, didReceiveMessage message: Any?) {
+        var newStr: String? = nil
+        if let message = message as? Data {
+            newStr = String(data: message, encoding: .utf8)
+        }
+
+        print("The websocket received a message: \(newStr ?? "")")
+    }
+
+    func webSocket(_ webSocket: PSWebSocket?, didFailWithError error: Error?) {
+        if let error = error {
+            print("The websocket handshake/connection failed with an error: \(error)")
+        }
+    }
+
+    func webSocket(_ webSocket: PSWebSocket?, didCloseWithCode code: Int, reason: String?, wasClean: Bool) {
+        print("The websocket closed with code: \(NSNumber(value: code)), reason: \(reason ?? ""), wasClean: \((wasClean) ? "YES" : "NO")")
+    }
+    
 }
